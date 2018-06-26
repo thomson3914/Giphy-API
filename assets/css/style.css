@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(240, 239, 239);
+    background-size: cover;
+	font-family: 'Roboto';
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+.btn {
+	margin: 10px;
+	opacity: 1;
+	background-color: black;
+	border-color: white;
+}
+
+.jumbotron {
+	color: white;
+	margin-bottom: auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-right: 10%;
+	margin-left: 10%;
+	text-align: center;
+	opacity: .8;
+	background-color:  rgb(23, 43, 43);
+    margin: 0 auto;
+
+}
+
+label {
+	color: black;
+	font-size: 24px;
+	margin-right: 0px;
+}
+
+p {
+	color: black;
+	font-size: 16px;
+}
+
+
+div1 {
+	display: inline-block;
+	float: left;
+	margin: 10px;
+}
