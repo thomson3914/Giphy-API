@@ -89,10 +89,6 @@ $(document).ready(function () {
                     //put gifs in a div
                     var showDiv = $("<div1>");
 
-                    //pull title of gif
-                    var showTitle = $("<p>").text("Title - " + results[i].title);
-                    showDiv.append(showTitle);
-                    
                     //pull gif
                     var showImage = $("<img>");
                     showImage.attr("src", results[i].images.fixed_height_still.url);
@@ -104,15 +100,10 @@ $(document).ready(function () {
                     showImage.attr("data-state", "still");
                     showImage.addClass("image");
                     showDiv.append(showImage);
-                    
+             
                     //pull rating of gif
-                    var showRating = $("<p>").text("Rating  " + results[i].rating);
-                    showDiv.append(showRating);
-
-                    
-
-
-
+                    var showRating = $("<p>").text(results[i].title + "   - Rating " + results[i].rating);
+                    showDiv.append(showRating);                 
 
                     //prepend showDiv to "#shows-view"
                     $("#shows-view").prepend(showDiv);
