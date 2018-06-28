@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(240, 239, 239);
+    background-color: rgb(248, 245, 245);
     background-size: cover;
 	font-family: 'Roboto';
 }
@@ -11,34 +11,38 @@ body {
 
 
 .btn {
-	margin: 10px;
-	opacity: 1;
-	background-color: black;
-	border-color: white;
+    margin: 10px;
+    opacity: 1;
+    background-color: rgb(116, 114, 114);
+	border-color: rgb(9, 111, 170);
+	/* box-shadow: 5px 10px 18px #888888; */
+	/* box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); */
 }
 
 .jumbotron {
-	color: white;
+	color: black;
 	margin-bottom: auto;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding-bottom: 1px;
+	padding-top: 1px;
 	margin-right: 10%;
 	margin-left: 10%;
-	text-align: center;
-	opacity: .8;
-	background-color:  rgb(23, 43, 43);
-    margin: 0 auto;
+    text-align: center;
+    opacity: .9;
+    /* background-color: rgb(10, 97, 126); */
+    background-image: url("../images/adultSwim5.gif");
+	margin: 0 auto;
+	border-bottom: 6px solid rgb(9, 111, 170);
 
 }
 
 label {
-	color: black;
+	color: rgb(9, 111, 170);
 	font-size: 24px;
 	margin-right: 0px;
 }
 
 p {
-	color: black;
+	color: rgb(9, 111, 170);
 	font-size: 16px;
 }
 
@@ -47,4 +51,6 @@ div1 {
 	display: inline-block;
 	float: left;
 	margin: 10px;
+	/* box-shadow: 10px 10px 5px #aaaaaa; */
+	/* box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); */
 }
