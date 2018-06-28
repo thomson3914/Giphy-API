@@ -1,3 +1,4 @@
+// this app.js when linked in the html renders smaller giphy gifs to the page - it is not as complete as app2.js
 $(document).ready(function () {
 
     // topic array
@@ -60,7 +61,7 @@ $(document).ready(function () {
 
     function displayGifs() {
         var tvShows = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShows + "&api_key=NvC7yVFuPNZp1NUpNsBetCDhN9CVla6c&limit=12";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShows + "&api_key=NvC7yVFuPNZp1NUpNsBetCDhN9CVla6c&limit=10";
 
         $.ajax({
             url: queryURL,

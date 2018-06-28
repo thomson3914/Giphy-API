@@ -5,7 +5,7 @@ $(document).ready(function () {
         "Silicon Valley", "Family Guy", "Game of Thrones", "Curb Your Enthusiasm", "Futurama", "Walking Dead",
         "South Park", "Seinfeld", "Westworld", "The Sopranos",]
 
-    // Function for displaying show buttons
+    // Function for displaying show buttons - activity week06 - day02 - 10 working-movie-app 
     function renderButtons() {
 
         // Deleting the buttons prior to adding buttons
@@ -28,7 +28,7 @@ $(document).ready(function () {
         }
     }
 
-    //function to add new button    
+    //function to add new button   - - activity week06 - day02 - 10 working-movie-app     
     function addShowButton() {
         // This function handles events when a show button is clicked
         $("#addShow").on("click", function () {
@@ -60,11 +60,11 @@ $(document).ready(function () {
 
 
 
-    // function that displays the gifs
+    // function that displays the gifs - AJAX call - activity week06 - day03 - 14 dynamic-elements  
     function displayGifs() {
         var tvShows = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tvShows +
-            "&api_key=NvC7yVFuPNZp1NUpNsBetCDhN9CVla6c&limit=6";
+            "&api_key=NvC7yVFuPNZp1NUpNsBetCDhN9CVla6c&limit=10";
 
         $.ajax({
             url: queryURL,
@@ -89,10 +89,10 @@ $(document).ready(function () {
                     //put gifs in a div
                     var showDiv = $("<div1>");
 
-                    //pull rating of gif
-                    var showRating = $("<p>").text("Rating  " + results[i].rating);
-                    showDiv.append(showRating);
-
+                    //pull title of gif
+                    var showTitle = $("<p>").text("Title - " + results[i].title);
+                    showDiv.append(showTitle);
+                    
                     //pull gif
                     var showImage = $("<img>");
                     showImage.attr("src", results[i].images.fixed_height_still.url);
@@ -104,6 +104,15 @@ $(document).ready(function () {
                     showImage.attr("data-state", "still");
                     showImage.addClass("image");
                     showDiv.append(showImage);
+                    
+                    //pull rating of gif
+                    var showRating = $("<p>").text("Rating  " + results[i].rating);
+                    showDiv.append(showRating);
+
+                    
+
+
+
 
                     //prepend showDiv to "#shows-view"
                     $("#shows-view").prepend(showDiv);
@@ -122,7 +131,7 @@ $(document).ready(function () {
     // Adding a click event listener to all elements with a class of ".tvShows"
     $(document).on("click", ".tvShows", displayGifs);
 
-    // onClick to Play and Pause gifs
+    //  onClick to Play and Pause gifs - - activity week06 - day03 - 15 pausing gifs 
     $(document).on("click", ".image", function () {
         var state = $(this).attr("data-state");
         if (state == "still") {
